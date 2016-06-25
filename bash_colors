@@ -1,0 +1,37 @@
+NC=$(tput sgr0)
+B03=$(tput setaf 234)
+B02=$(tput setaf 235)
+B01=$(tput setaf 240)
+B00=$(tput setaf 241)
+B0=$(tput setaf 244)
+B1=$(tput setaf 245)
+B2=$(tput setaf 254)
+B3=$(tput setaf 230)
+YELLOW=$(tput setaf 136)
+ORANGE=$(tput setaf 166)
+RED=$(tput setaf 160)
+MAGENTA=$(tput setaf 125)
+VIOLET=$(tput setaf 61)
+BLUE=$(tput setaf 33)
+CYAN=$(tput setaf 37)
+GREEN=$(tput setaf 64)
+
+function print_colors {
+  echo -e "${B03}B03${NC}"
+  echo -e "${B02}B02${NC}"
+  echo -e "${B01}B01${NC}"
+  echo -e "${B00}B00${NC}"
+  echo -e "${B0}B0${NC}"
+  echo -e "${B1}B1${NC}"
+  echo -e "${B2}B2${NC}"
+  echo -e "${B3}B3${NC}"
+  echo -e "${YELLOW}YELLOW${NC}"
+  echo -e "${ORANGE}ORANGE${NC}"
+  echo -e "${RED}RED${NC}"
+  echo -e "${MAGENTA}MAGENTA${NC}"
+  echo -e "${VIOLET}VIOLET${NC}"
+  echo -e "${BLUE}BLUE${NC}"
+  echo -e "${CYAN}CYAN${NC}"
+  echo -e "${GREEN}GREEN${NC}"
+}
+
