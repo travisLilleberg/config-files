@@ -6,7 +6,7 @@ done
 
 #Colors
 export CLICOLOR=1
-export PS1="${YELLOW}\h${NC}:${GREEN}\W ${VIOLET}\u${NC}$ "
+export PS1="\[${YELLOW}\]\h\[${NC}\]:\[${GREEN}\]\W \[${VIOLET}\]\u\[${NC}\]$ "
 
 #Default editor
 export EDITOR=vim
@@ -34,3 +34,9 @@ alias gd="git diff"
 
 alias v="vim"
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Fedora 3 Stuff (fd3)
+export CATALINA_HOME=/Library/Tomcat #(fd3)
+export FEDORA_HOME=$CATALINA_HOME/fedora3 #(fd3)
+export PATH=$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin #(fd3)

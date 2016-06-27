@@ -1,20 +1,20 @@
-NC=$(tput sgr0)
-B03=$(tput setaf 234)
-B02=$(tput setaf 235)
-B01=$(tput setaf 240)
-B00=$(tput setaf 241)
-B0=$(tput setaf 244)
-B1=$(tput setaf 245)
-B2=$(tput setaf 254)
-B3=$(tput setaf 230)
-YELLOW=$(tput setaf 136)
-ORANGE=$(tput setaf 166)
-RED=$(tput setaf 160)
-MAGENTA=$(tput setaf 125)
-VIOLET=$(tput setaf 61)
-BLUE=$(tput setaf 33)
-CYAN=$(tput setaf 37)
-GREEN=$(tput setaf 64)
+NC="$(tput sgr0)"
+B03="$(tput setaf 234)"
+B02="$(tput setaf 235)"
+B01="$(tput setaf 240)"
+B00="$(tput setaf 241)"
+B0="$(tput setaf 244)"
+B1="$(tput setaf 245)"
+B2="$(tput setaf 254)"
+B3="$(tput setaf 230)"
+YELLOW="$(tput setaf 136)"
+ORANGE="$(tput setaf 166)"
+RED="$(tput setaf 160)"
+MAGENTA="$(tput setaf 125)"
+VIOLET="$(tput setaf 61)"
+BLUE="$(tput setaf 33)"
+CYAN="$(tput setaf 37)"
+GREEN="$(tput setaf 64)"
 
 function print_colors {
   echo -e "${B03}B03${NC}"
