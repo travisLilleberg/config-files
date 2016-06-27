@@ -28,7 +28,9 @@ alias rm="rm -v"
 alias mkdir="mkdir -p"
 alias cp="cp -iv"
 
+alias gch="git checkout"
+alias gs="git status"
+alias gd="git diff"
+
 alias v="vim"
 
-#RVM Stuff
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
