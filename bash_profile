@@ -34,6 +34,8 @@ alias gd="git diff"
 
 alias v="vim"
 
+alias rc="rails c"
+alias rs="rails s"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Fedora 3 Stuff (fd3)
