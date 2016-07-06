@@ -9,11 +9,13 @@ set expandtab                  "Use spaces, not tabs
 set tabstop=2                  "Two spaces per tab
 set shiftwidth=2               "Auto-increment 2 spaces
 set list                       "Show invisible chars
-set listchars=tab:»-,trail:≈ "Set invisible chars
+set listchars=tab:»-,trail:≈   "Set invisible chars
 
 set hlsearch                   "Highlight search matches
 set ignorecase                 "Search insensitive
 set smartcase                  " ... unless the search contains a capital letter
+
+set splitright                 "When using vsplit, split to the right
 
 filetype off                   "required
 syntax enable
