@@ -31,6 +31,7 @@ alias cp="cp -iv"
 alias gch="git checkout"
 alias gs="git status"
 alias gd="git diff"
+alias gl="git log"
 
 alias v="vim"
 
