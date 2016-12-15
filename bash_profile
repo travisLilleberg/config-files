@@ -27,6 +27,9 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias mkdir="mkdir -p"
 alias cp="cp -iv"
+function gr {
+  grep -r "${1}" .
+}
 
 alias gch="git checkout"
 alias gs="git status"
@@ -37,9 +40,11 @@ alias v="vim"
 
 alias rc="rails c"
 alias rs="rails s"
+alias guard="bundle exec guard"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Fedora 3 Stuff (fd3)
 export CATALINA_HOME=/Library/Tomcat #(fd3)
 export FEDORA_HOME=$CATALINA_HOME/fedora3 #(fd3)
 export PATH=$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin #(fd3)
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
