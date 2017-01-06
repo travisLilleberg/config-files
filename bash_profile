@@ -12,7 +12,7 @@ export PS1="\[${YELLOW}\]\h\[${NC}\]:\[${GREEN}\]\W \[${VIOLET}\]\u\[${NC}\]$ "
 export EDITOR=vim
 
 #Adding our scripts to path
-export PATH=${PATH}:${HOME}/bin
+export PATH=${PATH}:${HOME}/bin:${HOME}/.apps
 
 #Handy Aliases
 alias rp="source ${HOME}/.bash_profile"
@@ -27,9 +27,7 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias mkdir="mkdir -p"
 alias cp="cp -iv"
-function gr {
-  grep -r "${1}" .
-}
+function gr { grep -r "${1}" . }
 
 alias gch="git checkout"
 alias gs="git status"
@@ -41,10 +39,11 @@ alias v="vim"
 alias rc="rails c"
 alias rs="rails s"
 alias guard="bundle exec guard"
+alias rspec="bundle exec rspec"
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Fedora 3 Stuff (fd3)
 export CATALINA_HOME=/Library/Tomcat #(fd3)
 export FEDORA_HOME=$CATALINA_HOME/fedora3 #(fd3)
 export PATH=$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin #(fd3)
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
