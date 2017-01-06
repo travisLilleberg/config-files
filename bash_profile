@@ -1,4 +1,10 @@
 #Load our functions
+
+
+
+
+#Testing new config-files script usage
+
 for f in ${HOME}/.bash_functions/*
 do
   source ${f}
