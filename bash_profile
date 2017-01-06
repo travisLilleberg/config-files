@@ -1,5 +1,4 @@
 #Load our functions
-
 for f in ${HOME}/.bash_functions/*
 do
   source ${f}
@@ -28,7 +27,9 @@ alias mv="mv -iv"
 alias rm="rm -v"
 alias mkdir="mkdir -p"
 alias cp="cp -iv"
-function gr { grep -r "${1}" . }
+function gr {
+  grep -r "${1}" .
+}
 
 alias gch="git checkout"
 alias gs="git status"
@@ -48,3 +49,4 @@ alias rspec="bundle exec rspec"
 export CATALINA_HOME=/Library/Tomcat #(fd3)
 export FEDORA_HOME=$CATALINA_HOME/fedora3 #(fd3)
 export PATH=$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin #(fd3)
+
