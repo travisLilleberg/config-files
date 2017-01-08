@@ -19,7 +19,6 @@ alias rp="source ${HOME}/.bash_profile"
 alias ep="vim ${HOME}/.bash_profile"
 
 alias home="cd ${HOME}/Desktop"
-alias bin="cd ~/bin"
 
 alias ls="ls -GFh"
 alias la="ls -laGFh"
