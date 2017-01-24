@@ -31,7 +31,7 @@ function gr {
 }
 
 alias gch="git checkout"
-alias gs="git status"
+alias gt="git status"
 alias gd="git diff"
 alias gl="git log"
 
@@ -41,11 +41,7 @@ alias rc="rails c"
 alias rs="rails s"
 alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
-
+alias rake="bundle exec rake"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# Fedora 3 Stuff (fd3)
-export CATALINA_HOME=/Library/Tomcat #(fd3)
-export FEDORA_HOME=$CATALINA_HOME/fedora3 #(fd3)
-export PATH=$PATH:$FEDORA_HOME/server/bin:$FEDORA_HOME/client/bin #(fd3)
 
