@@ -29,6 +29,11 @@ alias cp="cp -iv"
 function gr {
   grep -r "${1}" .
 }
+function new_spotlight {
+  if [ ! -z "${1}" ]; then
+    rails new "${1}" -m https://raw.githubusercontent.com/projectblacklight/spotlight/master/template.rb
+  fi
+}
 
 alias gch="git checkout"
 alias gt="git status"
