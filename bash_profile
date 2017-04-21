@@ -48,5 +48,12 @@ alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
 alias rake="bundle exec rake"
 
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+function clean_test {
+  rm ./db/test.sqlite3
+  RAILS_ENV=test bundle exec rake db:migrate
+  RAILS_ENV=test rails server
+}
 
