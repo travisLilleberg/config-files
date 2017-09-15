@@ -48,7 +48,7 @@ alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
 alias rake="bundle exec rake"
 
-export SSL_CERT_FILE="/Users/tlille01/.certs/ca-bundle.crt"
+#export SSL_CERT_FILE="/Users/tlille01/.certs/ca-bundle.crt"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
@@ -58,3 +58,8 @@ function clean_test {
   RAILS_ENV=test rails server
 }
 
+function oo {
+  if [ ! -z "${1}" ]; then
+    vim -O ${1} ${HOME}/Sites/testing/config/${1}
+  fi
+}
