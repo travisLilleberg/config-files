@@ -58,6 +58,13 @@ function clean_test {
   RAILS_ENV=test rails server
 }
 
+function mine {
+  if [ ! -f ${1} ]; then
+    touch ${1}
+  fi
+  mine ${1}
+}
+
 function oo {
   if [ ! -z "${1}" ]; then
     vim -O ${1} ${HOME}/Sites/testing/config/${1}
