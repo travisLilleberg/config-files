@@ -48,9 +48,9 @@ alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
 alias rake="bundle exec rake"
 
+alias startitall="mysql.server start && tomcat start && so start && sidekiq-app start"
+alias stopitall="sidekiq-app stop && mysql.server stop && tomcat stop && redis stop && so stop"
 #export SSL_CERT_FILE="/Users/tlille01/.certs/ca-bundle.crt"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 function clean_test {
   rm ./db/test.sqlite3
@@ -58,15 +58,9 @@ function clean_test {
   RAILS_ENV=test rails server
 }
 
-function mine {
-  if [ ! -f ${1} ]; then
-    touch ${1}
-  fi
-  mine ${1}
+function sync_spotlight {
+  rsync -avz tlille01@spotlightweb-prod-01.uit.tufts.edu:/usr/local/hydra/spotlight/public/uploads /Users/tlille01/Sites/tufts-spotlight/public
 }
 
-function oo {
-  if [ ! -z "${1}" ]; then
-    vim -O ${1} ${HOME}/Sites/testing/config/${1}
-  fi
-}
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
