@@ -48,8 +48,8 @@ alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
 alias rake="bundle exec rake"
 
-alias startitall="mysql.server start && tomcat start && so start && sidekiq-app start"
-alias stopitall="sidekiq-app stop && mysql.server stop && tomcat stop && redis stop && so stop"
+alias starteverything="mysql.server start && tomcat start && so start && sidekiq-app start"
+alias stopeverything="sidekiq-app stop && mysql.server stop && tomcat stop && redis stop && so stop"
 #export SSL_CERT_FILE="/Users/tlille01/.certs/ca-bundle.crt"
 
 function clean_test {
