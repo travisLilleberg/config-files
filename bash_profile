@@ -48,9 +48,22 @@ alias guard="bundle exec guard"
 alias rspec="bundle exec rspec"
 alias rake="bundle exec rake"
 
-alias starteverything="mysql.server start && tomcat start && so start && sidekiq-app start"
-alias stopeverything="sidekiq-app stop && mysql.server stop && tomcat stop && redis stop && so stop"
-#export SSL_CERT_FILE="/Users/tlille01/.certs/ca-bundle.crt"
+function start {
+  orig=$(pwd)
+  cd /Users/tlille01/Sites/epigaea
+  mysql.server start
+  tomcat start
+  so start
+  sidekiq-app start
+  cd ${orig}
+}
+
+function stop {
+  sidekiq-app stop
+  mysql.server stop
+  tomcat stop
+  so stop
+}
 
 function clean_test {
   rm ./db/test.sqlite3
@@ -62,5 +75,5 @@ function sync_spotlight {
   rsync -avz tlille01@spotlightweb-prod-01.uit.tufts.edu:/usr/local/hydra/spotlight/public/uploads /Users/tlille01/Sites/tufts-spotlight/public
 }
 
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
